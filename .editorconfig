@@ -1,0 +1,28 @@
+# EditorConfig: 协助跨编辑器维持一致的代码风格
+# 参考 https://editorconfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{cs,csproj}]
+# C# 文件使用 4 空格缩进（与既有源码保持一致）
+indent_style = space
+indent_size = 4
+
+[*.md]
+# Markdown 允许尾随空格（行尾两个空格 = 强制换行）
+trim_trailing_whitespace = false
+
+[*.{ps1,sh,yml,yaml,json}]
+indent_size = 2
+
+[*.{txt,log}]
+trim_trailing_whitespace = false
+insert_final_newline = false
